@@ -29,26 +29,26 @@ dino     55.4  97.2
 
 
 ### Lab Exercise
-```{r load-packages, message=FALSE}
+
 dino_data <- datasaurus_dozen %>% 
   filter(dataset == "dino") 
  ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
    geom_point()
 ```
 Ex2
-```{r load-packages, message=FALSE}
+
  star_data <- datasaurus_dozen %>%
    filter(dataset == "star")
 ggplot(data = star_data, mapping = aes(x = x, y = y)) + 
   geom_point() 
-```
+
 Ex 3
-```{r load-packages, message=FALSE}
+
 circle_data <- datasaurus_dozen %>% 
   filter(dataset == "circle")
 ggplot(data = circle_data, mapping = aes(x = x, y = y)) + 
    geom_point()
-```
+
 
 (Correlation Coefficient=0.0645) in dino
 (the graph like dino)
