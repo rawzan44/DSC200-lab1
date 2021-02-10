@@ -13,8 +13,51 @@ University ID: 2201001767
 library(tidyverse) 
 library(datasauRus)
 ```
+dino     55.4  97.2
+2 dino     51.5  96.0
+3 dino     46.2  94.5
+4 dino     42.8  91.4
+5 dino     40.8  88.3
+6 dino     38.7  84.9
+                x                    y           
+          Min.  :15.56       Min. : 0.01512  
+         1st Qu.:41.07     1st Qu.:22.56107   
+          Median :52.59    Median :47.59445     
+         Mean   :54.27     Mean  :47.83510  
+           3rd Qu.:67.28   3rd Qu.:71.81078  
+         Max.   :98.29      Max.    :99.69468  
 
 
 ### Lab Exercise
+```{r load-packages, message=FALSE}
+dino_data <- datasaurus_dozen %>% 
+  filter(dataset == "dino") 
+ ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
+   geom_point()
+```
+Ex2
+```{r load-packages, message=FALSE}
+ star_data <- datasaurus_dozen %>%
+   filter(dataset == "star")
+ggplot(data = star_data, mapping = aes(x = x, y = y)) + 
+  geom_point() 
+```
+Ex 3
+```{r load-packages, message=FALSE}
+circle_data <- datasaurus_dozen %>% 
+  filter(dataset == "circle")
+ggplot(data = circle_data, mapping = aes(x = x, y = y)) + 
+   geom_point()
+```
 
-(Type your answer to the Exercise here. Remember to include the code, you need to put the code between three backticks followed by the following line on top of the code {r load-packages, message=FALSE}. See 'Load Packages' above as an example. Delete everything in these brackets after typing your answer.)
+(Correlation Coefficient=0.0645) in dino
+(the graph like dino)
+(Correlation Coefficient=0.0683)
+(the graph like circle)
+
+
+
+
+
+
+
